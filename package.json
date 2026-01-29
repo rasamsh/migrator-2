@@ -1,0 +1,32 @@
+{
+  "name": "playwright-migrate",
+  "version": "2.0.0",
+  "description": "Migrate browser JS tests to Playwright",
+  "type": "module",
+  "bin": {
+    "playwright-migrate": "./bin/cli.js",
+    "pw-migrate": "./bin/cli.js"
+  },
+  "scripts": {
+    "migrate": "node bin/cli.js",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.41.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3",
+    "glob": "^10.3.10",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "inquirer": "^9.2.12",
+    "commander": "^11.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["playwright", "migration", "testing", "e2e", "cypress", "selenium", "puppeteer"]
+}
