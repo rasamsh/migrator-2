@@ -18,6 +18,15 @@ Convert browser-based JavaScript tests (Cypress, Selenium, Puppeteer, etc.) to P
 
 ## Quick Start
 
+# 1. Navigate to the migration tool directory
+cd playwright-migration-agent
+
+# 2. Install dependencies
+npm install
+
+# 3. Run against your repository
+node bin/cli.js /path/to/your/test-repo --full
+
 ```bash
 # Analyze what needs migration
 npx playwright-migrate /path/to/your/repo --analyze
