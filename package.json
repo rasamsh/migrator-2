@@ -1,22 +1,23 @@
 {
-  "name": "browserjs-to-playwright",
+  "name": "browserjs-to-playwright-bdd",
   "version": "1.0.0",
-  "description": "Convert Browser JS tests to Playwright",
+  "description": "Convert Browser JS tests to Playwright BDD (Cucumber/Gherkin)",
   "type": "module",
   "bin": {
-    "browserjs-to-playwright": "./bin/cli.js",
-    "bjs2pw": "./bin/cli.js"
+    "browserjs-to-playwright-bdd": "./bin/cli.js",
+    "bjs2pw-bdd": "./bin/cli.js"
   },
   "scripts": {
     "migrate": "node bin/cli.js",
-    "test": "playwright test",
-    "test:headed": "playwright test --headed",
-    "test:ui": "playwright test --ui",
-    "test:debug": "playwright test --debug",
-    "test:report": "playwright show-report"
+    "test": "npx bddgen && playwright test",
+    "test:headed": "npx bddgen && playwright test --headed",
+    "test:ui": "npx bddgen && playwright test --ui",
+    "test:debug": "npx bddgen && playwright test --debug"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.0",
+    "@cucumber/cucumber": "^10.3.1",
+    "playwright-bdd": "^6.6.0",
     "@types/node": "^20.11.0",
     "typescript": "^5.3.3",
     "glob": "^10.3.10",
@@ -27,6 +28,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-  },
-  "keywords": ["playwright", "migration", "testing", "e2e", "cypress", "selenium", "puppeteer"]
+  }
 }
