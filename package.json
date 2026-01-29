@@ -1,11 +1,11 @@
 {
-  "name": "playwright-migrate",
-  "version": "2.0.0",
-  "description": "Migrate browser JS tests to Playwright",
+  "name": "browserjs-to-playwright",
+  "version": "1.0.0",
+  "description": "Convert Browser JS tests to Playwright",
   "type": "module",
   "bin": {
-    "playwright-migrate": "./bin/cli.js",
-    "pw-migrate": "./bin/cli.js"
+    "browserjs-to-playwright": "./bin/cli.js",
+    "bjs2pw": "./bin/cli.js"
   },
   "scripts": {
     "migrate": "node bin/cli.js",
